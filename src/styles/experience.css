@@ -1,0 +1,94 @@
+.experience {
+  padding: 60px 20px;
+}
+
+.experience h2 {
+  color: #00d4ff;
+  font-size: 32px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; /* Ensures both columns have same height */
+  gap: 20px;
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.timeline-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+/* Left Card: titles, dates */
+.ti-left {
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Right Column: bullet list, force vertical-center */
+.ti-right {
+  flex: 1;
+  display: flex;
+  align-items: center; /* vertically centers the ul */
+}
+.ti-right ul {
+  margin: 0;
+  padding-left: 18px;
+  list-style-type: disc;
+}
+.timeline-item li {
+  color: #e0e0eb;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.timeline-item h3 {
+  color: #00d4ff;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.timeline-item h4 {
+  color: #e0e0eb;
+  font-size: 17px;
+  margin-bottom: 2px;
+}
+
+.timeline-item .date {
+  color: #a8b0c9;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* Responsive for mobile/tablet */
+@media (max-width: 900px) {
+  .timeline-item {
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+  }
+  .ti-left {
+    min-width: unset;
+    align-items: flex-start;
+  }
+  .ti-right {
+    align-items: flex-start;
+  }
+  .experience h2 {
+    font-size: 28px;
+  }
+}

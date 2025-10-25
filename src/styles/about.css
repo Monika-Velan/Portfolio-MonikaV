@@ -1,0 +1,80 @@
+/* about.css */
+.about {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.split {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.left {
+  flex: 0 0 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.right {
+  flex: 1;
+}
+
+.profile-pic {
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.3);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.right h2 {
+  color: #a383fd; /* Heading color */
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.right p {
+  color: #e0e0eb; /* Slightly off-white for readability */
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.about-list {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.about-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #d0d0f0;
+}
+
+@media (max-width: 900px) {
+  .split {
+    flex-direction: column;
+    text-align: center;
+  }
+  .left {
+    order: 2;
+  }
+  .right {
+    order: 1;
+  }
+  .profile-pic {
+    width: 250px;
+    margin-bottom: 20px;
+  }
+  .right h2 {
+    font-size: 28px;
+  }
+  .right p {
+    font-size: 16px;
+  }
+}
