@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/skills.css";
 
 const technicalSkills = [
-  { group: "Programming", skills: [{ name: "Python", percent: 80 }] },
+  { group: "Programming", skills: [{ name: "Python", percent: 80 }, { name: "JavaScript", percent: 85 }] },
   {
     group: "Frontend",
     skills: [
@@ -50,47 +50,47 @@ const softSkills = [
   }
 ];
 
-const CardColumn = ({ groups }) => (
-  <div className="portfolio-skills__column">
-    {groups.map((group) => (
-      <div className="portfolio-skills__group" key={group.group}>
-        <h3 className="portfolio-skills__group-title">{group.group}</h3>
-        {group.skills.map((skill) => (
-          <div className="portfolio-skills__item" key={skill.name}>
-            <span className="portfolio-skills__label">{skill.name}</span>
-            <div className="portfolio-skills__progress">
-              <div
-                className="portfolio-skills__progress-fill"
-                style={{ width: `${skill.percent}%` }}
-              />
-            </div>
-            <span className="portfolio-skills__percent">{skill.percent}%</span>
-          </div>
-        ))}
+const SkillRow = ({ skill }) => (
+  <div className="skill-row">
+    <span className="skill-name">{skill.name}</span>
+    <div className="skill-bar-container">
+      <div className="skill-bar">
+        <div className="skill-bar-fill" style={{ width: `${skill.percent}%` }} />
       </div>
-    ))}
+      <span className="skill-bar-percent">{skill.percent}%</span>
+    </div>
   </div>
 );
 
 const Skills = () => (
-  <section id="skills" className="portfolio-skills">
-    <div className="portfolio-skills__container">
-      <h2 className="portfolio-skills__main-title">MY SKILLS</h2>
+  <section id="skills" className="section skills-section-page">
+    <div className="skills-container">
+      <h2 className="skills-title">MY SKILLS</h2>
 
-      {/* Technical Skills Section */}
-      <div className="portfolio-skills__section">
-        <h2 className="portfolio-skills__section-title">Technical Skills</h2>
-        <div className="portfolio-skills__columns">
-          <CardColumn groups={technicalSkills.slice(0, 3)} />
-          <CardColumn groups={technicalSkills.slice(3)} />
-        </div>
+      {/* Technical Skills */}
+      <div className="skills-category">
+        <h3 className="skills-category-title">Technical Skills</h3>
+        {technicalSkills.map((group) => (
+          <div key={group.group} className="skills-group">
+            <h4 className="skills-group-title">{group.group}</h4>
+            <div className="skills-list">
+              {group.skills.map((skill) => (
+                <SkillRow key={skill.name} skill={skill} />
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
 
-      {/* Soft Skills Section */}
-      <div className="portfolio-skills__section portfolio-skills__section--soft">
-        <h2 className="portfolio-skills__section-title">Soft Skills</h2>
-        <div className="portfolio-skills__columns">
-          <CardColumn groups={softSkills} />
+      {/* Soft Skills */}
+      <div className="skills-category">
+        <h3 className="skills-category-title">Soft Skills</h3>
+        <div className="soft-skills-list">
+          {softSkills[0].skills.map((skill) => (
+            <div key={skill.name} className="soft-skill-item">
+              {skill.name}
+            </div>
+          ))}
         </div>
       </div>
     </div>

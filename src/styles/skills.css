@@ -1,371 +1,221 @@
-/* ================= PORTFOLIO SKILLS SECTION ================= */
-
-/* Main section wrapper */
-.portfolio-skills {
+/* Skills Section */
+.skills {
   padding: 60px 20px;
-  background: transparent;
-  width: 100%;
 }
 
-/* Main container for all skills content */
-.portfolio-skills__container {
-  background: rgba(30, 32, 60, 0.99);
-  border-radius: 22px;
-  max-width: 920px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px 35px 35px;
-  box-shadow: 0 6px 40px rgba(44, 46, 144, 0.15);
-}
-
-/* Main page title */
-.portfolio-skills__main-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+.skills h2 {
   color: #00d4ff;
-  margin-bottom: 40px;
-  text-shadow: 0 2px 4px rgba(20, 23, 38, 0.5);
-  text-transform: uppercase;
-}
-
-/* Section wrapper (Technical Skills, Soft Skills) */
-.portfolio-skills__section {
-  margin-bottom: 35px;
-}
-
-.portfolio-skills__section:last-child {
-  margin-bottom: 0;
-}
-
-/* Section titles */
-.portfolio-skills__section-title {
+  font-size: 32px;
+  margin-bottom: 24px;
   text-align: center;
+}
+
+/* Skills Container */
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: rgba(30, 32, 60, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 212, 255, 0.1);
+}
+
+.skills-title {
+  text-align: center;
+  color: #00d4ff;
+  font-size: 0.90rem;
+  margin-bottom: 40px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.skills-category {
+  margin-bottom: 50px;
+}
+
+.skills-category-title {
   color: #b699ea;
-  font-size: 1.7rem;
-  margin-bottom: 25px;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-}
-
-/* Soft skills section modifier */
-.portfolio-skills__section--soft {
-  background-color: rgba(55, 44, 88, 0.4);
-  border-radius: 12px;
-  padding: 25px 20px;
-  margin-top: 30px;
-}
-
-/* Columns container */
-.portfolio-skills__columns {
-  display: flex;
-  gap: 50px;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-/* Single column */
-.portfolio-skills__column {
-  flex: 1;
-  min-width: 0;
-}
-
-/* Skill group container */
-.portfolio-skills__group {
+  font-size: 1.8rem;
   margin-bottom: 30px;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
-.portfolio-skills__group:last-child {
-  margin-bottom: 0;
+.skills-group {
+  margin-bottom: 40px;
 }
 
-/* Group title (Programming, Frontend, etc.) */
-.portfolio-skills__group-title {
-  font-size: 1.15rem;
-  color: #9370db;
-  margin-bottom: 12px;
+.skills-group-title {
+  color: #805fb8;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
-/* Individual skill item row */
-.portfolio-skills__item {
+/* Skills List */
+.skills-list {
+  margin-bottom: 20px;
+}
+
+/* Skill Row */
+.skill-row {
   display: flex;
-  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  margin-bottom: 14px;
-  gap: 12px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: transform 0.3s ease;
 }
 
-/* Skill name label */
-.portfolio-skills__label {
-  width: 120px;
-  min-width: 120px;
-  flex-shrink: 0;
+.skill-row:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.skill-name {
   color: #eaf3ff;
   font-weight: 600;
-  font-size: 15px;
-  letter-spacing: 0.3px;
-  text-align: left;
+  font-size: 1.1rem;
+  flex: 0 0 auto;
 }
 
-/* Progress bar container */
-.portfolio-skills__progress {
+.skill-bar-container {
   flex: 1;
+  margin-left: 10px;
+  position: relative;
+}
+
+.skill-bar {
   background: #232440;
-  border-radius: 12px;
+  border-radius: 10px;
   height: 12px;
   overflow: hidden;
   position: relative;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
 }
 
-/* Progress bar fill */
-.portfolio-skills__progress-fill {
-  background: linear-gradient(90deg, #278598, #00d4ff);
+.skill-bar-fill {
+  background: linear-gradient(90deg, #00d4ff, #278598);
   height: 100%;
-  border-radius: 12px;
-  transition: width 1s ease-in-out;
-  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+  border-radius: 10px;
+  transition: width 0.8s ease;
 }
 
-/* Percentage text */
-.portfolio-skills__percent {
-  min-width: 45px;
-  flex-shrink: 0;
-  font-size: 14px;
-  color: #00d5ff;
-  font-weight: 700;
-  text-align: right;
+.skill-bar-percent {
+  position: absolute;
+  right: 0;
+  top: -25px;
+  font-size: 0.9rem;
+  color: #00d4ff;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
-/* ================== RESPONSIVE DESIGN ================== */
+.soft-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
 
-/* Large Desktop (1200px and above) */
+.soft-skill-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #eaf3ff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.soft-skill-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 30px 15px;
+  }
+  .skills-title {
+    font-size: 2rem;
+  }
+  .skills-category-title {
+    font-size: 1.5rem;
+  }
+  .skill-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .skill-bar-container {
+    margin-left: 0;
+    width: 100%;
+  }
+  .soft-skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .soft-skill-item {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
 @media (min-width: 1200px) {
-  .portfolio-skills__container {
-    max-width: 1100px;
-    padding: 45px 40px;
+  .skills-container {
+    padding: 60px 40px;
   }
-  
-  .portfolio-skills__columns {
-    gap: 60px;
+  .skills-title {
+    font-size: 3rem;
+    margin-bottom: 50px;
   }
-}
-
-/* Tablet Landscape (981px - 1199px) */
-@media (max-width: 1199px) and (min-width: 981px) {
-  .portfolio-skills__container {
-    padding: 35px 30px;
+  .skills-category-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
   }
-  
-  .portfolio-skills__columns {
-    gap: 40px;
-  }
-}
-
-/* Tablet (768px - 980px) */
-@media (max-width: 980px) {
-  .portfolio-skills__container {
-    padding: 30px 25px;
-  }
-  
-  .portfolio-skills__columns {
-    flex-direction: column;
-    gap: 25px;
-  }
-  
-  .portfolio-skills__main-title {
-    font-size: 1.75rem;
-    margin-bottom: 30px;
-  }
-  
-  .portfolio-skills__section-title {
+  .skills-group-title {
     font-size: 1.5rem;
-    margin-bottom: 20px;
   }
-}
-
-/* Mobile Landscape / Small Tablet (601px - 767px) */
-@media (max-width: 767px) {
-  .portfolio-skills {
-    padding: 40px 15px;
-  }
-  
-  .portfolio-skills__container {
-    padding: 25px 20px;
-    border-radius: 18px;
-  }
-  
-  .portfolio-skills__main-title {
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-  }
-  
-  .portfolio-skills__columns {
-    flex-direction: column;
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
   }
-  
-  .portfolio-skills__section-title {
-    font-size: 1.35rem;
-    margin-bottom: 18px;
+  .skill-row {
+    flex: 1 1 calc(50% - 10px);
+    margin-bottom: 0;
+    padding: 15px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 12px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
-  
-  .portfolio-skills__group-title {
-    font-size: 1.05rem;
-  }
-  
-  .portfolio-skills__item {
-    gap: 10px;
-    margin-bottom: 12px;
-  }
-  
-  .portfolio-skills__label {
-    width: 100px;
-    min-width: 100px;
-    font-size: 14px;
-  }
-  
-  .portfolio-skills__progress {
-    height: 11px;
-  }
-  
-  .portfolio-skills__percent {
-    min-width: 40px;
-    font-size: 13px;
-  }
-}
-
-/* Mobile Portrait (481px - 600px) */
-@media (max-width: 600px) {
-  .portfolio-skills {
-    padding: 30px 12px;
-  }
-  
-  .portfolio-skills__container {
-    padding: 22px 18px;
-    border-radius: 16px;
-  }
-  
-  .portfolio-skills__main-title {
-    font-size: 1.4rem;
-    margin-bottom: 22px;
-    letter-spacing: 1px;
-  }
-  
-  .portfolio-skills__section-title {
-    font-size: 1.25rem;
-    margin-bottom: 16px;
-  }
-  
-  .portfolio-skills__group-title {
-    font-size: 1rem;
+  .skill-name {
+    font-size: 1.3rem;
     margin-bottom: 10px;
   }
-  
-  .portfolio-skills__item {
-    gap: 8px;
-    margin-bottom: 12px;
+  .skill-bar-container {
+    margin-left: 0;
+    width: 100%;
   }
-  
-  .portfolio-skills__label {
-    width: 85px;
-    min-width: 85px;
-    font-size: 13px;
+  .skill-bar {
+    height: 15px;
   }
-  
-  .portfolio-skills__progress {
-    height: 10px;
+  .soft-skills-list {
+    gap: 20px;
   }
-  
-  .portfolio-skills__percent {
-    min-width: 38px;
-    font-size: 12px;
-  }
-  
-  .portfolio-skills__section--soft {
-    padding: 20px 15px;
-    margin-top: 25px;
-  }
-}
-
-/* Small Mobile (320px - 480px) */
-@media (max-width: 480px) {
-  .portfolio-skills {
-    padding: 25px 10px;
-  }
-  
-  .portfolio-skills__container {
-    padding: 20px 15px;
-    border-radius: 14px;
-  }
-  
-  .portfolio-skills__main-title {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-  }
-  
-  .portfolio-skills__section-title {
-    font-size: 1.15rem;
-    margin-bottom: 15px;
-  }
-  
-  .portfolio-skills__group-title {
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-  }
-  
-  .portfolio-skills__item {
-    gap: 6px;
-    margin-bottom: 11px;
-  }
-  
-  .portfolio-skills__label {
-    width: 75px;
-    min-width: 75px;
-    font-size: 12px;
-  }
-  
-  .portfolio-skills__progress {
-    height: 10px;
-  }
-  
-  .portfolio-skills__percent {
-    min-width: 35px;
-    font-size: 11px;
-  }
-  
-  .portfolio-skills__section--soft {
-    padding: 18px 12px;
-    margin-top: 20px;
-  }
-}
-
-/* Extra Small Mobile (less than 320px) */
-@media (max-width: 319px) {
-  .portfolio-skills__container {
-    padding: 18px 12px;
-  }
-  
-  .portfolio-skills__main-title {
+  .soft-skill-item {
+    padding: 12px 25px;
     font-size: 1.1rem;
-  }
-  
-  .portfolio-skills__section-title {
-    font-size: 1.05rem;
-  }
-  
-  .portfolio-skills__label {
-    width: 65px;
-    min-width: 65px;
-    font-size: 11px;
-  }
-  
-  .portfolio-skills__percent {
-    min-width: 32px;
-    font-size: 10px;
   }
 }
