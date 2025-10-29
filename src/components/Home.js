@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import "../styles/section.css";
-import animatedProfile from "../assets/generated-image.png";
+import animatedProfile from "../assets/profile portfolio.jpg";
 
 const aboutDetails = [
   "Web Developer experienced in responsive, user-friendly web applications.",

@@ -26,7 +26,7 @@ const Contact = () => {
           <p>Email: <a href="mailto:monikavelan2003@gmail.com">monikavelan2003@gmail.com</a></p>
           <p>Phone: <a href="tel:+919345519385">+91 93455 19385</a></p>
           <div className="contact-icons">
-            <a href="https://github.com/monikavelan" target="_blank" rel="noreferrer"><FaGithub /></a>
+            <a href="https://github.com/Monika-Velan" target="_blank" rel="noreferrer"><FaGithub /></a>
             <a href="https://www.linkedin.com/in/monika-v-237b34255/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
             <a href="mailto:monikavelan2003@gmail.com"><FaEnvelope /></a>
           </div>
