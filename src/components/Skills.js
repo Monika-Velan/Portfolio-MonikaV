@@ -45,7 +45,8 @@ const softSkills = [
       { name: "Communication", percent: 90 },
       { name: "Team Leadership", percent: 87 },
       { name: "Adaptability", percent: 85 },
-      { name: "Fast Learner", percent: 90 }
+      { name: "Fast Learner", percent: 90 },
+      { name: "Time Management", percent: 92 }
     ]
   }
 ];
