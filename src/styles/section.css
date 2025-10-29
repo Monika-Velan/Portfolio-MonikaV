@@ -273,6 +273,76 @@
 }
 
 
+/* =========================
+   CLEAN IMAGE CONTAINER WITH SOFT GLOW
+========================= */
+
+.portfolio-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* soft glow behind image */
+.portfolio-image-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 60%,
+    rgba(163, 131, 253, 0.3),
+    transparent 75%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.portfolio-image-wrapper:hover::before {
+  opacity: 1;
+}
+
+.portfolio-image-wrapper:hover {
+  transform: scale(1.02);
+}
+
+/* main image style */
+.portfolio-profile-img {
+  width: 230px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  z-index: 2;
+  box-shadow: 0 8px 28px rgba(163, 131, 253, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.portfolio-profile-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 36px rgba(163, 131, 253, 0.35);
+  filter: brightness(1.1);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .portfolio-profile-img {
+    width: 190px;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-profile-img {
+    width: 150px;
+    border-radius: 18px;
+  }
+}
+
+
 
 /* =============================== PROJECTS SECTION =============================== */
 .projects-grid {
