@@ -1,3 +1,7 @@
+
+
+
+
 // import React from "react";
 // import { motion } from "framer-motion";
 // import "../styles/projects.css";
@@ -20,8 +24,8 @@
 //         </ul>
 //       </>
 //     ),
-//     github: "https://github.com/monikavelan",
-//     live: "#"
+//     github: "#",
+//     live: "#",
 //   },
 //   {
 //     title: "Student Diary Alumni Portal",
@@ -32,13 +36,11 @@
 //         <ul>
 //           <li>Built for improved communication and resource sharing among alumni and students.</li>
 //           <li>Added real-time chat using Socket.io and notification systems via email.</li>
-
-
 //         </ul>
 //       </>
 //     ),
-//     github: "https://github.com/monikavelan",
-//     live: "#"
+//     github: "https://github.com/Monika-Velan",
+//     live: "https://studentdiary-frontend.vercel.app", // ✅ Added live deployed link
 //   },
 // ];
 
@@ -84,6 +86,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/projects.css";
@@ -116,13 +127,35 @@ const projects = [
       <>
         <p><strong>Stack:</strong> MERN Stack | Socket.io | Email Integration</p>
         <ul>
-          <li>Built for improved communication and resource sharing among alumni and students.</li>
-          <li>Added real-time chat using Socket.io and notification systems via email.</li>
+          <li>Implemented an interactive academic calendar featuring event
+            scheduling and reminders, a real-time community forum using
+            Socket.io for instant communication, and a Kanban-style to-do board
+            supporting task prioritization and progress tracking.</li>
+          <li>Deployed full-stack application seamlessly on Vercel (frontend) and
+            Render (backend) ensuring scalability and continuous integration.</li>
         </ul>
       </>
     ),
     github: "https://github.com/Monika-Velan",
-    live: "https://studentdiary-frontend.vercel.app", // ✅ Added live deployed link
+    live: "https://studentdiary-frontend.vercel.app",
+  },
+  {
+    title: "Jewellery E-Commerce Platform",
+    time: "2025",
+    desc: (
+      <>
+        <p><strong>Stack:</strong> MERN Stack | Redux Toolkit | Stripe | Cloudinary</p>
+        <ul>
+          <li>Developed a full-stack jewellery e-commerce platform with secure authentication and product management.</li>
+          <li>Implemented cart, wishlist, and payment modules using Stripe API and Redux for global state handling.</li>
+          <li>Designed an elegant, responsive UI for seamless browsing and checkout experience.</li>
+          <li>Integrated Cloudinary for product image upload and optimized backend performance using Express APIs.</li>
+          <li>Deployed the application on <strong>Vercel (frontend)</strong> and <strong>Render (backend)</strong>.</li>
+        </ul>
+      </>
+    ),
+    github: "https://github.com/Monika-Velan/Ecommerce",
+    live: "https://ecommerce-jewellery-gamma.vercel.app/",
   },
 ];
 
